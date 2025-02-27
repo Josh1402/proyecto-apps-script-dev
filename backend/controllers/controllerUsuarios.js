@@ -17,8 +17,8 @@ function guardarUsuario(usuario) {
     }
     
 }
-
-function listarUsuarios(){
-    return obtenerDatos(env_().SH_REGISTRO_USUARIOS);
-
+    
+function listarUsuarios(id = undefined){
+    //return obtenerDatos(env_().SH_REGISTRO_USUARIOS);
+    return JSON.stringify(_read(obtenerSheet(env_().SH_REGISTRO_USUARIOS), id));
 }
